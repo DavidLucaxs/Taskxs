@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*  Header/Cabecalho */
+header{
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(-45deg,black,rgb(101, 0, 0),black);
+    color: white;
+    align-items: center;
+    padding: 10px;
+    height: 25vh;
+    justify-content: center;
+}
+
+header > div{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    width: 80%;
+}
+
+
+header > div > a{
+    padding: 7px;
+    border-radius: 50%;
+    border: 2px black solid;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    font-size: 120%;
+    transition: 0.5s;
+
+}
+
+header > div > a:hover{
+    border:2px  solid rgb(255, 6, 6);
+    color: black !important;
+    transform: translate(-4px,-4px);
+    background-color: white !important;
+}
+
+/*Filtros das tarefas*/
+main{
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    min-height: 100vh;
+}
+
+#filtros{
+    margin-top: 5px;
+}
+#filtros > select{
+    border-radius: 10px;
+    width: 48%;
+}
+
+#filtros > button{
+    width: 24%;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color: rgb(209, 209, 209);
+}
+
+.ativado{
+    background-color: white !important;
+    border: 2px solid green !important;
+    font-weight: bold;
+}
+#todas_tarefas{
+    display: none;
+}
+
+/*Tarefas*/
+
+#tarefas_diarias{
+    display: flex;
+}
+
+#tarefas_diarias, #todas_tarefas{
+    align-self: center;
+    width: 98%;
+    justify-content: flex-start;
+    padding: 10px;
+    margin-top: 10px;
+    color: white;
+    flex-direction: column;
+    
+}
+
+.tarefa{
+    order: 2;
+    background-color: rgba(255, 255, 255, 0.721);
+    color: black;
+    padding: 5px;
+    display: flex;
+    border-radius: 0px 0px 5px 5px;
+    width: 100%;
+    justify-content: space-between;
+    font-weight: 600;
+    margin-top: 15px;
+    user-select: none;
+    box-shadow: 1px 1px 5px white;
+    flex-wrap: nowrap;
+}
+
+.tarefa > input[type="checkbox"]{
+    display: none;
+}
+
+.tarefa > label{
+    transition: text-decoration 0.5s;
+}
+
+.tarefa > label::before{
+    content: "";
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-color: white;
+    margin-right: 5px;
+
+}
+
+.tarefa > div{
+    display: flex;
+    flex-direction: row;
+    float: right;
+}
+
+.tarefa > div > button{
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 3px;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+    background-color: black;
+    width: 25%;
+    margin-inline: 5px;
+}
+
+
+/*Tarefa Concluida*/
+.concluida > label::before{
+    background-color: rgb(169, 255, 169);
+}
+
+.concluida > label{
+    text-decoration:line-through;
+    font-weight: 300;
+}
+.concluida{
+    background-color: rgba(255, 255, 255, 0.527);
+    font-weight: 100;
+    order: 9;
+    box-shadow: 1px 1px 5px green;
+}
+
+/*Tarefa adiada*/
+.passada{
+    background-color: rgba(255, 255, 255, 0.351) !important;
+    font-weight: 100;
+    transform: scale(0.98);
+    order: 10 !important;
+    box-shadow: 1px 1px 5px yellow !important;
+}
+
+.passada > div > .bi-fast-forward-fill{
+    background-color: white;
+    color: rgb(183, 183, 4);
+    border-color: yellow;
+    order: -1;
+}
+
+
+/*Tarefa Fixada*/
+.fixada{
+    background-color: white;
+    order: 1;
+    box-shadow: 1px 1px 5px blue;
+}
+
+.fixada > label::before{
+    border: 1px solid black;
+}
+
+.fixada > div > .bi-pin-angle{
+    background-color: white;
+    color: blue;
+    border-color: blue;
+    order: -1;
+
+}
+
+/*Botoes*/
+.bi-fast-forward-fill:hover{
+    box-shadow: 1px 1px 1px yellow;
+    transform: translate(-3px,-3px);
+    color: yellow;
+}
+
+.bi-pencil:hover{
+    box-shadow: 1px 1px 1px rgb(160, 107, 236);
+    transform: translate(-3px,-3px);
+    color: rgb(160, 107, 236);
+}
+
+.bi-trash:hover{
+    box-shadow: 1px 1px 1px red;
+    transform: translate(-3px,-3px);
+    color: red;
+}
+
+.bi-pin-angle:hover{
+    box-shadow: 1px 1px 1px blue;
+    transform: translate(-3px,-3px);
+    color: blue;
+}
+
+/*Todas as tarefas para editar*/

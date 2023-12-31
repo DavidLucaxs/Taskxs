@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taskxs</title>
+
+    <!--Estilizacao(CSS,Bootstrap)-->
+    <link rel="stylesheet" href="tasks-styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+
+    
+</head>
+<body>
+    <header>
+        <h1>Tarefas</h1>
+        <div>
+            <a href="../../index.html" class="bi bi-house-fill"></a>
+            <a href="#" class="bi bi-calendar-fill"></a>
+            <a href="#" class="bi bi-journal-bookmark-fill"></a>
+            <a href="#" class="bi bi-cart"></a>
+            <a href="#" class="bi bi-piggy-bank-fill"></a>
+            <a href="#" class="bi bi-person-arms-up"></a>
+            <a href="#" class="bi bi-folder"></a>
+            <a href="#" class="bi bi-github"></a>
+            <a href="#" class="bi bi-unlock"></a>
+            <a href="#" class="bi bi-person-fill"></a>
+            <a href="#" class="bi bi-wrench"></a>
+        </div>
+    </header>
+
+    <main>
+        <div id="filtros">
+            <select id="filtro_tarefas">
+                <option value="nada">Nenhum</option>
+                <option value="estudos">Estudos</option>
+                <option value="trabalho">Trabalho</option>
+                <option value="projetos">Projetos</option>
+                <option value="espiritual">Espiritual</option>
+                <option value="amor">Meu amor</option>
+                <option value="social">Social</option>
+                <option value="fisico">Fisico</option>
+                <option value="social">Importante</option>
+                <option value="familia">Familia</option>
+            </select>
+            <button id="tarefas_hoje" class="ativado" onclick="ativar(1)">Tarefas de hoje</button>
+            <button id="todas-tarefas" onclick="ativar(2)">Todas as tarefas</button>
+        </div>
+        <div id="tarefas_diarias">
+            <div class="tarefa concluida passada fixada">
+                <input type="checkbox" name="001" id="001">
+                <label for="001">Construir tarefas</label>
+                <div class="tarefa_botoes">
+                    <button class="bi bi-fast-forward-fill"></button>
+                    <button class="bi bi-pencil"></button>
+                    <button class="bi bi-trash" ></button>
+                    <button class="bi bi-pin-angle"></button>
+                </div>
+            </div>
+
+            <div class="tarefa concluida">
+                <input type="checkbox" name="002" id="002">
+                <label for="002">Construir tarefassdasdasdasdas</label>
+                <div class="tarefa_botoes">
+                    <button class="bi bi-fast-forward-fill"></button>
+                    <button class="bi bi-pencil"></button>
+                    <button class="bi bi-trash" ></button>
+                    <button class="bi bi-pin-angle"></button>
+                </div>
+            </div>
+            <div class="tarefa passada">
+                <input type="checkbox" name="003" id="003">
+                <label for="003">Construir tarefas</label>
+                <div class="tarefa_botoes">
+                    <button class="bi bi-fast-forward-fill"></button>
+                    <button class="bi bi-pencil"></button>
+                    <button class="bi bi-trash" ></button>
+                    <button class="bi bi-pin-angle"></button>
+                </div>
+            </div>
+
+            <div class="tarefa fixada">
+                <input type="checkbox" name="004" id="004">
+                <label for="004">Construir tarefas</label>
+                <div class="tarefa_botoes">
+                    <button class="bi bi-fast-forward-fill"></button>
+                    <button class="bi bi-pencil"></button>
+                    <button class="bi bi-trash" ></button>
+                    <button class="bi bi-pin-angle"></button>
+                </div>
+            </div>
+        </div>
+        <div id="todas_tarefas">
+            <div class="tarefa concluida">
+                <input type="checkbox" name="002" id="002">
+                <label for="002">Construir tarefassdasdasdasdas</label>
+                <div class="tarefa_botoes">
+                    <button class="bi bi-fast-forward-fill"></button>
+                    <button class="bi bi-pencil"></button>
+                    <button class="bi bi-trash" ></button>
+                    <button class="bi bi-pin-angle"></button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div>
+
+    </div>
+    <!--Scripts-->
+    <script src="main-tasks.js"></script>
+    
+</body>
+</html>
