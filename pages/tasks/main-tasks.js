@@ -1,9 +1,10 @@
+//Para esconder e ativar as divs
 const btn_taskToday = document.getElementById("tarefas_hoje")
 const btn_allTasks = document.getElementById("todas-tarefas")
 const div_allTasks = document.getElementById("todas_tarefas")
 const div_DaylyTasks = document.getElementById("tarefas_diarias")
 
-const ativado = 1 //Um para o btn_taskToday e 2 para o outro botao
+const cover = document.getElementById('cover')
 
 const ativar = (btn_number) =>{
     if(btn_number == 1){
@@ -21,4 +22,13 @@ const ativar = (btn_number) =>{
             div_allTasks.style.display = "flex"
         }
     }
+}
+
+const desativar_criador=()=>{
+    cover.style.display = 'none'
+}
+
+const ativar_criador=()=>{
+    cover.style.display = 'flex'
+
 }

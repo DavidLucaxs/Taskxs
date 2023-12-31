@@ -31,6 +31,7 @@
 
     <main>
         <div id="filtros">
+            <button id="criar_tarefa" onclick="ativar_criador()">Criar tarefa +</button>
             <select id="filtro_tarefas">
                 <option value="nada">Nenhum</option>
                 <option value="estudos">Estudos</option>
@@ -40,7 +41,7 @@
                 <option value="amor">Meu amor</option>
                 <option value="social">Social</option>
                 <option value="fisico">Fisico</option>
-                <option value="social">Importante</option>
+                <option value="importante">Importante</option>
                 <option value="familia">Familia</option>
             </select>
             <button id="tarefas_hoje" class="ativado" onclick="ativar(1)">Tarefas de hoje</button>
@@ -103,9 +104,46 @@
             </div>
         </div>
     </main>
-    <div>
-
+    <div id="cover">
+        <div id="criador_tarefa">
+            <div id="head">
+                <h3>Criador de tarefas</h3>
+                <button id="close_window" onclick="desativar_criador()">X</button>
+            </div>
+            <label for="task_title">Titulo:</label>
+            <input type="text" id="task_title" placeholder="Inserir descricao da tarefa..." maxlength="30" required>
+            <label for="filtro_tarefa">Filtro</label>
+            <select id="filtro_tarefa">
+                <option value="nada">Nenhum</option>
+                <option value="estudos">Estudos</option>
+                <option value="trabalho">Trabalho</option>
+                <option value="projetos">Projetos</option>
+                <option value="espiritual">Espiritual</option>
+                <option value="amor">Meu amor</option>
+                <option value="social">Social</option>
+                <option value="fisico">Fisico</option>
+                <option value="importante">Importante</option>
+                <option value="familia">Familia</option>
+            </select>
+            <label for="repetir">Repeticao</label>
+            <select id="repetir">
+                <option value="no">Nao repetir</option>
+                <option value="all">Todos os dias</option>
+                <option value="week">Semanalmente</option>
+            </select>
+            <div id="weekdays">
+                <input type="checkbox" id="seg"><label for="seg">Seg</label>
+                <input type="checkbox" id="ter"><label for="ter">Ter</label>
+                <input type="checkbox" id="qua"><label for="qua">Qua</label>
+                <input type="checkbox" id="qui"><label for="qui">Qui</label>
+                <input type="checkbox" id="sex"><label for="sex">Sex</label>
+                <input type="checkbox" id="sab"><label for="sab">Sab</label>
+                <input type="checkbox" id="dom"><label for="dom">Dom</label>
+            </div>
+            <button id="add-task">Adicionar tarefa</button>
+        </div>
     </div>
+    
     <!--Scripts-->
     <script src="main-tasks.js"></script>
     
