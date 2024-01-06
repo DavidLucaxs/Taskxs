@@ -32,7 +32,7 @@ document.getElementById("add_task").addEventListener("click",()=>{
         filtro : select_filtro_tarefa.value,
         repetir : dias
     }
-    console.log(tarefa)
+    fetch()
     
     
 })
