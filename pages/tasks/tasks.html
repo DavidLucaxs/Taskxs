@@ -6,7 +6,7 @@
     <title>Taskxs</title>
 
     <!--Estilizacao(CSS,Bootstrap)-->
-    <link rel="stylesheet" href="tasks-styles.css">
+    <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
 
     
@@ -34,6 +34,9 @@
             <button id="criar_tarefa" onclick="ativar_criador()">Criar tarefa +</button>
             <select id="filtro_tarefas">
                 <option value="nada">Nenhum</option>
+                <option value="concluidas">Concluidas</option>
+                <option value="inconcluidas">Nao concluidas</option>
+                <option value="passadas">Passadas</option>
                 <option value="estudos">Estudos</option>
                 <option value="trabalho">Trabalho</option>
                 <option value="projetos">Projetos</option>
@@ -140,12 +143,13 @@
                 <input type="checkbox" id="sab"><label for="sab">Sab</label>
                 <input type="checkbox" id="dom"><label for="dom">Dom</label>
             </div>
-            <button id="add-task">Adicionar tarefa</button>
+            <button id="add_task">Adicionar tarefa</button>
         </div>
     </div>
     
     <!--Scripts-->
-    <script src="main-tasks.js"></script>
+    <script src="scripts/show-divs.js" defer></script>
+    <script src="scripts/manger-tasks.js" defer></script>
     
 </body>
 </html>
